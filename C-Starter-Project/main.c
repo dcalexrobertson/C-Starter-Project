@@ -1,26 +1,12 @@
+//FuzzBizzNezz Assignment by Alex Robertson
+
 #include <stdio.h>
+
+void fuzzBizzNezz(int fuzz, int bizz, int nezz);
 
 int main(int argc, const char * argv[]) {
     
-    //FizzBuzz Assignment by Alex Robertson
-    
-    for (int i = 1; i <= 100; i++) {
-        if (i % 5 == 0 && i % 3 == 0) {
-            printf("FizzBuzz\n");
-        } else if (i % 5 == 0) {
-            printf("Buzz\n");
-        } else if (i % 3 == 0) {
-            printf("Fizz\n");
-        } else {
-            printf("%d\n", i);
-        }
-    }
-
-    //FuzzBizzNezz Assignment by Alex Robertson    
-    
-    int fuzz;
-    int bizz;
-    int nezz;
+    int fuzz, bizz, nezz;
     
     printf("Please enter a number: ");
     scanf("%d", &fuzz);
@@ -30,6 +16,13 @@ int main(int argc, const char * argv[]) {
     
     printf("Please enter a third number: ");
     scanf("%d", &nezz);
+    
+    fuzzBizzNezz(fuzz, bizz, nezz);
+    
+    return 0;
+}
+
+void fuzzBizzNezz(int fuzz, int bizz, int nezz) {
     
     for (int i = 1; i <= nezz; i++) {
         if (i % bizz == 0 && i % fuzz == 0) {
@@ -42,10 +35,7 @@ int main(int argc, const char * argv[]) {
             printf("%d\n", i);
         }
     }
-    
-    return 0;
 }
-
 
     
 
